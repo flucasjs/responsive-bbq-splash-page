@@ -1,0 +1,123 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-seriff;
+    font-size: 1rem;
+    color: #404040;
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.25rem;
+    font-weight: 300;
+    color: #FFF;
+    margin: 0;
+}
+
+/* The adjacent sibling combinator is being used here for practice. */
+/* Using a class would be a better option. */
+h1 + p {
+    color: #F18119;
+    font-weight: 900;
+    font-size: 1.3125rem;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.3125rem;
+    margin: 0;
+}
+
+h2 + p {
+    font-size: 1rem;
+    font-weight: 900;
+    color: #F18119;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.top-text {
+    font-size: 0.625rem;
+    font-weight: 900;
+    color: #F18119;
+    text-transform: uppercase;
+    order: -1;
+}
+
+.fine-print {
+    font-size: 0.625rem;
+    letter-spacing: 1px;
+}
+
+strong {
+    font-weight: 700;
+}
+
+/* ======================
+    Intro Section
+====================== */
+
+.intro {
+    background-image: url(../assets/images/dark-ribs.jpg);
+    background-color: #404040;
+    background-size: cover;
+    background-position: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Might need more space on the sides for smaller screens. */
+    padding: 0 0.5em 2em;
+    min-height: 50vh;
+}
+
+/* =======================
+    Main Content Section
+========================== */
+
+.main-content {
+    padding: 2em 1em;
+}
+
+.intro > *,
+.main-content > * {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =======================
+    Media Queries
+========================== */
+
+@media (min-width: 500px) {
+    body {
+        font-size: 1.125rem;
+        display: flex;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2,
+    h1 + p {
+        font-size: 1.75rem;
+    }
+
+    .intro,
+    .main-content {
+        width: 50%;
+        min-height: 100vh;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
