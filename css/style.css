@@ -91,6 +91,28 @@ strong {
 }
 
 /* =======================
+    Form
+========================== */
+
+.email-collector {
+    width: 250px;
+}
+
+input,
+.btn-wide {
+    width: 100%;
+    border-radius: 5px;
+}
+
+input {
+    font-family: inherit;
+    text-align: inherit;
+    padding: 0.25em;
+    border: 1px solid #404040;
+    margin-bottom: 0.75em;
+}
+
+/* =======================
     Media Queries
 ========================== */
 
