@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900&display=swap" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
+        <script defer src="script.js"></script>
         <title>Become a BBQ Master!</title>
     </head>
     <body>
@@ -33,10 +34,10 @@
                 signing up for this free webinar!
             </p>
             <form class="email-collector" action="#" method="POST">
-                <input type="text" placeholder="first name"
+                <input name="firstName" type="text" placeholder="first name"
                 aria-label="first name" required />
-                <input type="email" placeholder="email" aria-label="first name"
-                required />
+                <input name="emailAddress" type="email" placeholder="email" 
+                aria-label="email address" required />
                 <button class="btn btn-primary btn-wide" type="submit">Register</button>
             </form>
             <p class="fine-print">
