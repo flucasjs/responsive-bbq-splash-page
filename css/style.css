@@ -1,8 +1,16 @@
+/* ====================
+    General
+==================== */
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
+
+/* ====================
+    Typography
+==================== */
 
 body {
     font-family: 'Source Sans Pro', sans-seriff;
@@ -22,9 +30,9 @@ h1 {
 /* The adjacent sibling combinator is being used here for practice. */
 /* Using a class would be a better option. */
 h1 + p {
-    color: #F18119;
     font-weight: 900;
     font-size: 1.3125rem;
+    color: #F18119;
     margin: 0;
 }
 
@@ -51,7 +59,7 @@ h2 + p {
     margin-top: 0;
     text-transform: uppercase;
     order: -1;
-    /* Some letter spacing should make this easier to read. */
+    letter-spacing: 1px;
 }
 
 .fine-print {
@@ -63,9 +71,26 @@ strong {
     font-weight: 700;
 }
 
-/* ======================
-    Intro Section
-====================== */
+input {
+    font-family: inherit;
+    text-align: inherit;
+    padding: 0.25em;
+}
+
+.btn {
+    font-size: 0.625rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1em 1.5em;
+}
+
+/* ====================
+    Layout
+==================== */
+
+
+/* ---- Intro Section ---- */
 
 .intro {
     background-image: url(../assets/images/ribs.jpg);
@@ -82,9 +107,7 @@ strong {
     min-height: 50vh;
 }
 
-/* =======================
-    Main Content Section
-========================== */
+/* ---- Main Content Section ---- */
 
 .main-content {
     padding: 2em 1em;
@@ -98,9 +121,7 @@ strong {
     margin-right: auto;
 }
 
-/* =======================
-    Form
-========================== */
+/* ---- Form ---- */
 
 .email-collector {
     width: 250px;
@@ -113,9 +134,6 @@ input,
 }
 
 input {
-    font-family: inherit;
-    text-align: inherit;
-    padding: 0.25em;
     /* Consider making the border color slightly lighter. */
     border: 1px solid #404040;
     margin-bottom: 0.75em;
@@ -128,12 +146,7 @@ input:focus {
 }
 
 .btn {
-    font-size: 0.625rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 1px;
     display: inline-block;
-    padding: 1em 1.5em;
     border: 0;
     border-radius: 5px;
     cursor: pointer;
