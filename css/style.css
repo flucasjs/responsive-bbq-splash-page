@@ -27,8 +27,6 @@ h1 {
     margin: 0;
 }
 
-/* The adjacent sibling combinator is being used here for practice. */
-/* Using a class would be a better option. */
 h1 + p {
     font-weight: 900;
     font-size: 1.3125rem;
@@ -94,7 +92,6 @@ input {
 
 .intro {
     background-image: url(../assets/images/ribs.jpg);
-    /* Consider making this slightly darker. */
     background-color: #404040;
     background-blend-mode: multiply;
     background-size: cover;
@@ -102,7 +99,6 @@ input {
     display:flex;
     flex-direction: column;
     justify-content: space-between;
-    /* Might need more space on the sides for smaller screens. */
     padding: 0 0.65em 2em;
     min-height: 50vh;
 }
@@ -115,7 +111,6 @@ input {
 
 .intro > *,
 .main-content > * {
-    /* Might need to make this wider. */
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
@@ -134,7 +129,6 @@ input,
 }
 
 input {
-    /* Consider making the border color slightly lighter. */
     border: 1px solid #404040;
     margin-bottom: 0.75em;
     transform: scale(1);
@@ -206,5 +200,11 @@ input:required:focus {
 
     .top-text {
         margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .intro > * {
+        max-width: 600px;
     }
 }
