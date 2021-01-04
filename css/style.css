@@ -47,6 +47,14 @@ h2 + p {
     margin: 0;
 }
 
+.main-content h2 + p {
+    margin-bottom: 1em;
+}
+
+.description {
+    margin: 0 0 1.25em;
+}
+
 .top-text {
     font-size: 0.625rem;
     font-weight: 900;
@@ -63,6 +71,7 @@ h2 + p {
 .fine-print {
     font-size: 0.625rem;
     letter-spacing: 1px;
+    margin: 0 0 1em;
 }
 
 strong {
@@ -130,10 +139,11 @@ input,
 
 input {
     border: 1px solid #404040;
-    margin-bottom: 0.75em;
+    margin-bottom: 1em;
     transform: scale(1);
     transition: transform 250ms;
 }
+
 
 input:focus {
     transform: scale(1.05);
@@ -145,6 +155,10 @@ input:required {
 
 input:required:focus {
     border-width: 2px;
+}
+
+form input:last-of-type {
+    margin-bottom: 1.125em;
 }
 
 .btn {
@@ -159,6 +173,7 @@ input:required:focus {
     color: #FFF;
     transform: scale(1);
     transition: transform 250ms;
+    margin-bottom: 1.4em;
 }
 
 .btn-primary:focus,
