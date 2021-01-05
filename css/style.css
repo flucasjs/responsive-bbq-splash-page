@@ -51,6 +51,14 @@ h2 + p {
     margin-bottom: 1em;
 }
 
+.confirmation-text {
+    margin-bottom: 0.0625em;
+}
+
+.name {
+    text-transform: capitalize;
+}
+
 .description {
     margin: 0 0 1.25em;
 }
