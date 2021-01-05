@@ -9,10 +9,10 @@ emailCollectorForm.addEventListener("submit", event => {
     let userFirstName = webinarForm.get("firstName");
     let userEmailAddress = webinarForm.get("emailAddress");
 
-    // Consider adding some padding between these typography elements.
     let updatedMainContent = `
-        <h2>
-            Congratulations, ${sanitizeHTML(userFirstName)}!
+        <h2 class="confirmation-text">
+            Congratulations,       
+            <span class="name">${sanitizeHTML(userFirstName)}</span>!
         </h2>
         <p>
             You're on your way to becoming a BBQ Master!
