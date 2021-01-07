@@ -47,7 +47,7 @@ h2 + p {
     margin: 0;
 }
 
-.main-content h2 + p {
+main h2 + p {
     margin-bottom: 1em;
 }
 
@@ -122,12 +122,12 @@ input {
 
 /* ---- Main Content Section ---- */
 
-.main-content {
+main {
     padding: 2em 1em 2em;
 }
 
-.intro > *,
-.main-content > * {
+main > *,
+.intro > * {
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
@@ -208,13 +208,13 @@ form input:last-of-type {
         font-size: 1.75rem;
     }
 
-    .intro,
-    .main-content {
+    main,
+    .intro {
         width: 50%;
         min-height: 100vh;
     }
 
-    .main-content {
+    main {
         display: flex;
         flex-direction: column;
         justify-content: center;
