@@ -44,7 +44,7 @@ h2 + p {
     font-weight: 900;
     color: #F18119;
     text-transform: uppercase;
-    margin: 0;
+    margin: 0 auto;
 }
 
 main h2 + p {
@@ -60,7 +60,7 @@ main h2 + p {
 }
 
 .description {
-    margin: 0 0 1.25em;
+    margin: 0 auto 1.25em;
 }
 
 .top-text {
@@ -79,7 +79,7 @@ main h2 + p {
 .fine-print {
     font-size: 0.625rem;
     letter-spacing: 1px;
-    margin: 0 0 1em;
+    margin: 0 auto 1em;
 }
 
 strong {
