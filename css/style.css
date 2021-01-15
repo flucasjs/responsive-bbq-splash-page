@@ -8,6 +8,30 @@
     box-sizing: border-box;
 }
 
+img {
+    max-width: 25%;
+    cursor: pointer;
+}
+
+/* .img-container {
+    position: absolute;
+    width: 20%;
+    min-width: 10%;
+    background-color: white;
+    top: 4px;
+    right: 4px;
+    left: auto;
+    bottom: auto;
+    object-fit: cover;
+    max-height: 175px;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 0 50px;
+} */
+
+
 /* ====================
     Typography
 ==================== */
@@ -27,10 +51,16 @@ h1 {
     margin: 0;
 }
 
+.intro h1 {
+    font-size: 2.5rem;
+    margin: 0 0 1.5em 2em;
+    max-width: 275px;
+}
+
 h1 + p {
     font-weight: 900;
     font-size: 1.3125rem;
-    color: #F18119;
+    color: #1792D2;
     margin: 0;
 }
 
@@ -42,7 +72,7 @@ h2 {
 h2 + p {
     font-size: 1rem;
     font-weight: 900;
-    color: #F18119;
+    color: #1792D2;
     text-transform: uppercase;
     margin: 0 auto;
 }
@@ -66,10 +96,10 @@ main h2 + p {
 .top-text {
     font-size: 0.625rem;
     font-weight: 900;
-    color: #F18119;
+    color:#1792D2;
     padding-top: 0.5em;
-    border-top: 5px solid #F18119;
-    border-image: linear-gradient(to left, #FF713B, #FFA51D) 1;
+    border-top: 5px solid #1792D2;
+    border-image: linear-gradient(to left, #1792D2, #1e86be) 1;
     margin-top: 0;
     text-transform: uppercase;
     order: -1;
@@ -108,27 +138,35 @@ input {
 /* ---- Intro Section ---- */
 
 .intro {
-    background-image: url(../assets/images/ribs.jpg);
-    background-color: #404040;
+    position: relative;
+    background-image: url(../assets/images/musician.jpg), linear-gradient(pink, blue);
     background-blend-mode: multiply;
     background-size: cover;
     background-position: center;
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 0 0.65em 2em;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 0 2em;
     min-height: 50vh;
+}
+
+@keyframes Animation { 
+    from{transform:rotate(0deg)}
+	to{transform:rotate(360deg)}	
 }
 
 /* ---- Main Content Section ---- */
 
 main {
-    padding: 2em 1em 2em;
+    padding: 0 1em 2em;
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 main > *,
 .intro > * {
-    max-width: 400px;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -137,6 +175,7 @@ main > *,
 
 .email-collector {
     width: 250px;
+    margin: 0 auto;
 }
 
 input,
@@ -177,7 +216,7 @@ form input:last-of-type {
 }
 
 .btn-primary {
-    background-image: linear-gradient(to left, #FF713B, #FFA51D);
+    background-image: linear-gradient(to left, #1792D2, #1e86be);
     color: #FFF;
     transform: scale(1);
     transition: transform 250ms;
@@ -189,11 +228,18 @@ form input:last-of-type {
     transform: scale(1.05);
 }
 
+.b-text {
+    font-size: 1.75rem;
+    font-weight: 900;
+    color: #1792D2;
+    margin: 0 auto;
+}
+
 /* =======================
     Media Queries
 ========================== */
 
-@media (min-width: 500px) {
+@media (min-width: 650px) {
     body {
         font-size: 1.125rem;
         display: flex;
@@ -206,6 +252,7 @@ form input:last-of-type {
     h2,
     h1 + p {
         font-size: 1.75rem;
+        margin-top: 0.5em;
     }
 
     main,
@@ -213,21 +260,111 @@ form input:last-of-type {
         width: 50%;
         min-height: 100vh;
     }
+    
+    .intro {
+        padding-right: 0.65em;
+        padding-left: 0.65em;
+        align-items: flex-end;
+    }
+    
+    .intro h1 {
+        font-size: 2.5rem;
+        margin: 0 0 3em 2em;
+        max-width: 600px;
+    }
 
     main {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        padding-top: 3em;
+        justify-content: space-between;
+    }
+
+    .main-container {
+        margin-top: 4em;
     }
 
     .top-text {
         margin-bottom: 0;
     }
+    
+    .mn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 0.2em;
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 950px) {
+    .intro h1 {
+        font-size: 2.75rem;
+        margin: 0 0 3em 2em;
+        max-width: 400px;
+    }
 }
 
 @media (min-width: 1200px) {
-    .intro > * {
+    .intro h1 {
+        font-size: 3rem;
+        max-width: 500px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .intro h1 {
+        font-size: 3.5rem;
         max-width: 600px;
     }
+}
+
+.mn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 1pxx;
+    margin-bottom: 0.2em;
+    font-size: 2rem;
+}
+
+.mn + h3 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 auto 2em;
+    font-size: 1.75rem;
+    color: #1792D2;
+}
+
+.mn::before,
+.mn::after {
+    content: '';
+    background-color: #1792D2;
+    width: 2em;
+    height: 2.5px;
+    border-radius: 100px;
+}
+
+.mn::before {
+    margin-right: 0.5em;
+}
+
+
+.mn::after {
+    margin-left: 0.5em;
+    
+}
+
+.event {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.a {
+    font-weight: 900;
+    text-transform: uppercase;
 }
