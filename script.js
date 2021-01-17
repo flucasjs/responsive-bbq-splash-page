@@ -11,21 +11,21 @@ emailCollectorForm.addEventListener("submit", event => {
 
     let updatedMainContent = `
         <h2 class="confirmation-text">
-            Congratulations,       
+            We can't wait to see you,       
             <span class="name">${sanitizeHTML(userFirstName)}</span>!
         </h2>
         <p>
-            You're on your way to becoming a BBQ Master!
-            </p>
+            Tell your friends!
+        </p>
         <p class="fine-print">
-            You will get weekly BBQ tips sent to: 
+            Updates to the event will be sent to: 
             ${sanitizeHTML(userEmailAddress)}
         </p>
     `;
 
-    let ourMainContent = document.querySelector(".main-content");
+    let mainContentContainer = document.querySelector(".main-container");
 
-    ourMainContent.innerHTML = updatedMainContent;
+    mainContentContainer .innerHTML = updatedMainContent;
 
 })
 
