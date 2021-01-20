@@ -51,10 +51,14 @@ h1 {
     margin: 0;
 }
 
-.intro h1 {
-    font-size: 2.5rem;
-    margin: 0 0 1.5em 2em;
-    max-width: 275px;
+strong {
+    font-weight: 700;
+}
+
+input {
+    font-family: inherit;
+    text-align: inherit;
+    padding: 0.25em;
 }
 
 h1 + p {
@@ -79,6 +83,27 @@ h2 + p {
 
 main h2 + p {
     margin-bottom: 1em;
+}
+
+.intro h1 {
+    font-size: 2.5rem;
+    margin: 0 0 1.5em 2em;
+    max-width: 275px;
+}
+
+.city {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.2em;
+}
+
+.city + h3 {
+    color: #1792D2;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 auto 2em;
 }
 
 .confirmation-text {
@@ -112,14 +137,9 @@ main h2 + p {
     margin: 0 auto 1em;
 }
 
-strong {
-    font-weight: 700;
-}
-
-input {
-    font-family: inherit;
-    text-align: inherit;
-    padding: 0.25em;
+.sponsor {
+    font-weight: 900;
+    text-transform: uppercase;
 }
 
 .btn {
@@ -170,6 +190,39 @@ main > *,
     margin-left: auto;
     margin-right: auto;
 }
+
+.event {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.city {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.city::before,
+.city::after {
+    content: '';
+    background-color: #1792D2;
+    width: 2em;
+    height: 2.5px;
+    border-radius: 100px;
+}
+
+.city::before {
+    margin-right: 0.5em;
+}
+
+
+.city::after {
+    margin-left: 0.5em;
+}
+
 
 /* ---- Form ---- */
 
@@ -287,7 +340,7 @@ form input:last-of-type {
         margin-bottom: 0;
     }
     
-    .mn {
+    .city {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -318,53 +371,4 @@ form input:last-of-type {
         font-size: 3.5rem;
         max-width: 600px;
     }
-}
-
-.mn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-    letter-spacing: 1pxx;
-    margin-bottom: 0.2em;
-    font-size: 2rem;
-}
-
-.mn + h3 {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin: 0 auto 2em;
-    font-size: 1.75rem;
-    color: #1792D2;
-}
-
-.mn::before,
-.mn::after {
-    content: '';
-    background-color: #1792D2;
-    width: 2em;
-    height: 2.5px;
-    border-radius: 100px;
-}
-
-.mn::before {
-    margin-right: 0.5em;
-}
-
-
-.mn::after {
-    margin-left: 0.5em;
-    
-}
-
-.event {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.a {
-    font-weight: 900;
-    text-transform: uppercase;
 }
