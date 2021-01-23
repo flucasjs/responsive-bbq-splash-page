@@ -8,30 +8,6 @@
     box-sizing: border-box;
 }
 
-img {
-    max-width: 25%;
-    cursor: pointer;
-}
-
-/* .img-container {
-    position: absolute;
-    width: 20%;
-    min-width: 10%;
-    background-color: white;
-    top: 4px;
-    right: 4px;
-    left: auto;
-    bottom: auto;
-    object-fit: cover;
-    max-height: 175px;
-    min-height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0 0 0 50px;
-} */
-
-
 /* ====================
     Typography
 ==================== */
@@ -61,13 +37,6 @@ input {
     padding: 0.25em;
 }
 
-h1 + p {
-    font-weight: 900;
-    font-size: 1.3125rem;
-    color: #1792D2;
-    margin: 0;
-}
-
 h2 {
     font-size: 1.3125rem;
     margin: 0;
@@ -87,7 +56,7 @@ main h2 + p {
 
 .intro h1 {
     font-size: 2.5rem;
-    margin: 0 0 1.5em 2em;
+    margin: 0 0.5em 1.5em 2em;
     max-width: 275px;
 }
 
@@ -223,6 +192,10 @@ main > *,
     margin-left: 0.5em;
 }
 
+.sponsor-logo {
+    max-width: 25%;
+    cursor: pointer;
+}
 
 /* ---- Form ---- */
 
@@ -292,6 +265,12 @@ form input:last-of-type {
     Media Queries
 ========================== */
 
+@media (min-width: 500px) {
+    .intro h1 {
+        margin: 0 1.5em 1.5em 2em;
+    }
+}
+
 @media (min-width: 650px) {
     body {
         font-size: 1.125rem;
@@ -351,24 +330,61 @@ form input:last-of-type {
     }
 }
 
-@media (min-width: 950px) {
+@media (min-width: 750px) {
     .intro h1 {
         font-size: 2.75rem;
-        margin: 0 0 3em 2em;
+    }
+}
+
+@media (min-width: 950px) {
+    .intro h1 {
+        font-size: 3rem;
+        margin: 0 0.5 3em 2em;
         max-width: 400px;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1250px) {
     .intro h1 {
-        font-size: 3rem;
-        max-width: 500px;
+        font-size: 3.25rem;
+        max-width: 450px;
+    }
+
+    .intro h1 {
+        margin: 0 0.1em 3em 2em;
     }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1450px) {
+    .intro h1 {
+        font-size: 3.5rem;
+        max-width: 550px;
+    }
+
+    .intro h1 {
+        margin: 0 0.2em 3em 3em;
+    }
+}
+
+@media (min-width: 1550px) {
+    .intro h1 {
+        font-size: 3.3rem;
+        max-width: 550px;
+    }
+
+    .intro h1 {
+        margin: 0 0.3em 3em 2em;
+    }
+}
+
+
+@media (min-width: 1750px) {
     .intro h1 {
         font-size: 3.5rem;
         max-width: 600px;
+    }
+
+    .intro h1 {
+        margin: 0 0.7em 3em 2em;
     }
 }
