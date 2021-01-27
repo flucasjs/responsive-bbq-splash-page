@@ -18,12 +18,13 @@ body {
     color: #404040;
     margin: 0;
     text-align: center;
+    background: whitesmoke;
 }
 
 h1 {
     font-size: 2.25rem;
     font-weight: 300;
-    color: #FFF;
+    color:#88CDF2;
     margin: 0;
 }
 
@@ -51,7 +52,7 @@ h2 + p {
 }
 
 main h2 + p {
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
 }
 
 .intro h1 {
@@ -64,7 +65,8 @@ main h2 + p {
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 0.2em;
+    margin-bottom: 0;
+    margin-top: 0.2em;
 }
 
 .city + h3 {
@@ -72,7 +74,7 @@ main h2 + p {
     font-size: 1.75rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin: 0 auto 2em;
+    margin: 0 auto 1em;
 }
 
 .confirmation-text {
@@ -84,7 +86,8 @@ main h2 + p {
 }
 
 .description {
-    margin: 0 auto 1.25em;
+    margin: 0 0.05em 1.5em;
+    line-height: 1.6em;
 }
 
 .top-text {
@@ -106,7 +109,7 @@ main h2 + p {
     margin: 0 auto 1em;
 }
 
-.sponsor {
+.logo-container > p {
     font-weight: 900;
     text-transform: uppercase;
 }
@@ -192,7 +195,7 @@ main > *,
     margin-left: 0.5em;
 }
 
-.sponsor-logo {
+.logo {
     max-width: 25%;
     cursor: pointer;
 }
@@ -207,11 +210,11 @@ main > *,
 input,
 .btn-wide {
     width: 100%;
-    border-radius: 5px;
 }
 
 input {
-    border: 1px solid #404040;
+    border: 0;
+    border-bottom: 0.1em solid #1792D2;
     margin-bottom: 1em;
     transform: scale(1);
     transition: transform 250ms;
@@ -252,13 +255,6 @@ form input:last-of-type {
 .btn-primary:focus,
 .btn-primary:hover {
     transform: scale(1.05);
-}
-
-.b-text {
-    font-size: 1.75rem;
-    font-weight: 900;
-    color: #1792D2;
-    margin: 0 auto;
 }
 
 /* =======================
@@ -305,6 +301,10 @@ form input:last-of-type {
         max-width: 600px;
     }
 
+    .city + h3 {
+        margin: 0 auto 1em;
+    }
+
     main {
         display: flex;
         flex-direction: column;
@@ -325,8 +325,9 @@ form input:last-of-type {
         justify-content: center;
         text-transform: uppercase;
         letter-spacing: 1px;
-        margin-bottom: 0.2em;
+        margin-bottom: 0;
         font-size: 2.5rem;
+        line-height: 1em;
     }
 }
 
